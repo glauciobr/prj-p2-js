@@ -14,7 +14,6 @@ import br.com.glauciorocha.prjp2js.repository.UsuarioRepository;
 
 @RestController
 @RequestMapping(value="/usuarios")
-@CrossOrigin
 public class UsuarioResources {
 
 	@Autowired
@@ -22,6 +21,7 @@ public class UsuarioResources {
 	
 
 	@RequestMapping(value="/validar", method=RequestMethod.GET)
+	@CrossOrigin
 	public boolean validarAcesso(@RequestBody Usuario usuario) {
 		
 		List<Usuario> usuarios = usuarioRepository.findByEmail(usuario.getEmail());
