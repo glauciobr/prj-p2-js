@@ -14,6 +14,7 @@ import br.com.glauciorocha.prjp2js.repository.UsuarioRepository;
 
 @RestController
 @RequestMapping(value="/usuarios")
+@CrossOrigin
 public class UsuarioResources {
 
 	@Autowired
