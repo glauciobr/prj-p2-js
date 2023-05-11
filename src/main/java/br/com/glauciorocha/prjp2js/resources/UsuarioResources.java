@@ -21,7 +21,6 @@ public class UsuarioResources {
 	
 
 	@RequestMapping(value="/validar", method=RequestMethod.GET)
-	@CrossOrigin
 	public boolean validarAcesso(@RequestBody Usuario usuario) {
 		
 		List<Usuario> usuarios = usuarioRepository.findByEmail(usuario.getEmail());
