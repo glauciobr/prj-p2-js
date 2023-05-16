@@ -21,7 +21,7 @@ public class UsuarioResources {
 	private UsuarioRepository usuarioRepository;
 	
 
-	@RequestMapping(value="/validar", method=RequestMethod.GET)
+	@RequestMapping(value="/validar", method=RequestMethod.POST)
 	@CrossOrigin
 	public boolean validarAcesso(@RequestBody Usuario usuario) {
 		
