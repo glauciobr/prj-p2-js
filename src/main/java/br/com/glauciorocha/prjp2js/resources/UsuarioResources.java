@@ -12,17 +12,17 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.glauciorocha.prjp2js.domain.Usuario;
 import br.com.glauciorocha.prjp2js.repository.UsuarioRepository;
 
-@CrossOrigin
 @RestController
 @RequestMapping(value="/usuarios")
+@CrossOrigin
 public class UsuarioResources {
 
 	@Autowired
 	private UsuarioRepository usuarioRepository;
 	
 
-	@CrossOrigin
 	@RequestMapping(value="/validar", method=RequestMethod.GET)
+	@CrossOrigin
 	public boolean validarAcesso(@RequestBody Usuario usuario) {
 		
 		List<Usuario> usuarios = usuarioRepository.findByEmail(usuario.getEmail());
@@ -41,6 +41,7 @@ public class UsuarioResources {
 	}
 	
 	@RequestMapping(method=RequestMethod.POST)
+	@CrossOrigin
 	public String addUsuario(@RequestBody Usuario usuario) {
 		
 		usuarioRepository.save(usuario);
